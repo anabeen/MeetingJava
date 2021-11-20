@@ -159,7 +159,7 @@ public class MeetingSchedulerTest {
 	 
     
 	
-	/*
+	
 	  @Test 
 	  public void shouldNotHaveOverlappingMeetings() { //given 
 		  meetingRequest
@@ -180,7 +180,7 @@ public class MeetingSchedulerTest {
 	  meetings[0].getStartTime().getMinuteOfHour()); assertEquals(11,
 	  meetings[0].getFinishTime().getHourOfDay()); assertEquals(0,
 	  meetings[0].getFinishTime().getMinuteOfHour()); }
-	 */
+	 
 	 
 
 }
