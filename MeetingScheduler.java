@@ -48,8 +48,6 @@ public class MeetingScheduler{
 
         Map<LocalDate, Set<Meeting>> meetings = new HashMap<LocalDate, Set<Meeting>>();
         
-        Map<LocalDate, ArrayList<Meeting>> arrayMeeting = new HashMap<LocalDate, ArrayList<Meeting>>();
-
         String employeeId = "";
         // here we are capturing request submission time and employee id
         for(int i=1;i<requestLines.length;i=i+2){
@@ -74,31 +72,25 @@ public class MeetingScheduler{
             		officeStartTime, officeFinishTime, meetingSlotRequest1);
             
             
-            if(meetings.containsKey(meetingDate)){
-            	// if we have a meeting date check if the start date is same
-            	for (LocalDate ld: meetings.keySet()) {
-            		// only go through the key that has same meeting date
-            		if (meetings.containsKey(meetingDate)) {
-                    	for (var entry : meetings.values()) {
-                 		   for (Meeting m : entry) {
 
-                 			   if (m.getStartTime().hourOfDay() == meeting.getStartTime().hourOfDay() ||
-                 					   m.getFinishTime().hourOfDay() == meeting.getFinishTime().hourOfDay()) {
-                 				   // if they have same replace 
-                 			   }
-
-                 		   }
-                 		}
-            		}
-            	}
-            	
+            
+            if(meetings.containsKey(meetingDate)){           	
 
             	// if the order overlaps
-            	
+                for (Map.Entry<LocalDate, Set<Meeting>> meetingEntry : meetings.entrySet()) {
+            		if (meetingDate == meetingEntry.getKey())
+            		{
+            			Set<Meeting> setOfMeeting = meetingEntry.getValue();
+            			for (Meeting m : setOfMeeting) {
+            				
+            			}
+            		}
+            		
+                }
             	
             	// if the order doesn't
             	
-                if (meetings.get(meetingDate).contains(meetingSlotRequest1[0])) 
+                if (meetings.get(meetingDate) != null) 
                 	//shouldNotHaveOverlappingMeetings
                 {                            	
                 	System.out.println("HERES?"); 

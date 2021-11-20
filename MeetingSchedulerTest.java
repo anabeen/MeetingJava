@@ -97,7 +97,7 @@ public class MeetingSchedulerTest {
 
 	
 	
-	
+	/*
 	  @Test 
 	  public void shouldProcessMeetingsInChronologicalOrderOfSubmission() {
 	  //given 
@@ -118,7 +118,7 @@ public class MeetingSchedulerTest {
 	  meeting.getStartTime().getMinuteOfHour()); assertEquals(11,
 	  meeting.getFinishTime().getHourOfDay()); assertEquals(0,
 	  meeting.getFinishTime().getMinuteOfHour()); }
-	 
+	 */
 	 
 	 
 
